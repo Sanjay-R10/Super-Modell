@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Lato',sans-serif;
+}
+
+
+body{
+    background:url(./Red\ Art.jpg) no-repeat center center/cover;
+    height: 100vh;
+    position:relative;
+}
+
+#open-btn{
+    position:absolute;
+    top:60%;
+    left: 40%;
+    width:300px;
+    font-size:1.5rem;
+    height:80px;
+    border-radius:15px;
+    padding:5px;
+    background:transparent;
+    color: aliceblue;
+    border:solid 2px white;
+    transition:0.5s;
+    box-shadow:7px 7px 5px rgb(0,0,0,0.1);
+    cursor: pointer;
+}
+
+#open-btn:hover{
+    background-color:black;
+    color:white;
+}
+
+#model-container{
+    background-color: aliceblue;
+    position: absolute;
+    top:40%;
+    left:50%;
+    width:120px;
+    height:60px;
+    border-radius:10px;
+    padding:5px;
+    font-size:1.0rem; 
+    display:flex;
+    align-items: center;   
+    justify-content: space-around; 
+    animation-name :animatemodel;
+    animation-duration: 0.3s;
+}
+
+#close-btn{
+    font-size:2rem;
+    cursor:pointer;
+    color: chocolate;
+}
+
+#model-container{
+    display:none;
+    position:fixed;
+    z-index:1;
+    top:40%;
+    left:45%;
+    height:10%;
+    width:20%;
+    padding:20px;
+}
+
+/* Model Animate Section */
+
+@keyframes animatemodel{
+    from{
+        top: -300px;
+        opacity:0;
+    }
+    to{
+        top:50%;
+        opacity: 1;
+        }
+}
